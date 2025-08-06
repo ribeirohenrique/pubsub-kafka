@@ -1,14 +1,12 @@
 package com.ltest.pubsubkafka.domain.port.out;
 
-/**
- * Porta de Saída (Outbound Port) que define o contrato para publicar mensagens.
- * A implementação desta interface saberá como se comunicar com um sistema de mensageria externo (Kafka).
- */
-public interface MessagePublisherPort {
 
+import br.com.cafe.especial.CustomSchema;
+
+public interface MessagePublisherPort {
     /**
-     * Publica uma mensagem em um destino pré-configurado.
-     * @param message A mensagem a ser publicada.
+     * Publica uma mensagem Avro-compatível.
+     * @param message O objeto da mensagem a ser publicado.
      */
-    void publish(String message);
+    void publish(CustomSchema message);
 }

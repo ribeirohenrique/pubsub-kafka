@@ -1,0 +1,139 @@
+{
+  "doc": "Schema para descrever um lote de café especial.",
+  "fields": [
+    {
+      "doc": "Identificador único do lote de café.",
+      "name": "idLote",
+      "type": "string"
+    },
+    {
+      "doc": "Nome comercial ou de fantasia do café.",
+      "name": "nomeComercial",
+      "type": "string"
+    },
+    {
+      "name": "origem",
+      "type": {
+        "fields": [
+          {
+            "doc": "País de origem do café.",
+            "name": "pais",
+            "type": "string"
+          },
+          {
+            "doc": "Região produtora específica.",
+            "name": "regiao",
+            "type": "string"
+          },
+          {
+            "doc": "Nome da fazenda ou produtor.",
+            "name": "fazenda",
+            "type": "string"
+          },
+          {
+            "doc": "Altitude do cultivo em metros.",
+            "name": "altitude",
+            "type": "int"
+          }
+        ],
+        "name": "OrigemInfo",
+        "type": "record"
+      }
+    },
+    {
+      "doc": "Nome do produtor ou da produtora responsável.",
+      "name": "produtor",
+      "type": "string"
+    },
+    {
+      "doc": "Variedade do grão (ex: Catuaí, Bourbon Amarelo, Gesha).",
+      "name": "variedade",
+      "type": "string"
+    },
+    {
+      "name": "processamento",
+      "type": {
+        "doc": "Método de processamento pós-colheita.",
+        "name": "MetodoProcessamento",
+        "symbols": [
+          "NATURAL",
+          "LAVADO",
+          "HONEY",
+          "FERMENTACAO_ANAEROBICA",
+          "OUTRO"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "name": "perfilTorra",
+      "type": {
+        "fields": [
+          {
+            "doc": "Nome da empresa que realizou a torra.",
+            "name": "torrefacao",
+            "type": "string"
+          },
+          {
+            "doc": "Data em que o café foi torrado.",
+            "name": "dataTorra",
+            "type": {
+              "logicalType": "date",
+              "type": "int"
+            }
+          },
+          {
+            "name": "grauTorra",
+            "type": {
+              "name": "GrauTorraEnum",
+              "symbols": [
+                "CLARA",
+                "MEDIA",
+                "ESCURA"
+              ],
+              "type": "enum"
+            }
+          }
+        ],
+        "name": "TorraInfo",
+        "type": "record"
+      }
+    },
+    {
+      "doc": "Lista de descritores sensoriais (ex: floral, frutado, chocolate, caramelo).",
+      "name": "notasSensoriais",
+      "type": {
+        "items": "string",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "Descrição da acidez (ex: Cítrica, Málica, Equilibrada).",
+      "name": "acidez",
+      "type": "string"
+    },
+    {
+      "doc": "Descrição do corpo da bebida (ex: Leve, Cremoso, Encorpado).",
+      "name": "corpo",
+      "type": "string"
+    },
+    {
+      "doc": "Pontuação final do café segundo a metodologia da Specialty Coffee Association (SCA), de 0 a 100.",
+      "name": "pontuacaoSCA",
+      "type": "float"
+    },
+    {
+      "doc": "Peso da embalagem em gramas.",
+      "name": "pesoGrama",
+      "type": "int"
+    },
+    {
+      "default": true,
+      "name": "disponivel",
+      "type": "boolean"
+    }
+  ],
+  "name": "CustomSchema",
+  "namespace": "br.com.cafe.especial",
+  "type": "record"
+}
