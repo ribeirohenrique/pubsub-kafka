@@ -15,10 +15,10 @@ public class MessageProcessingServiceImpl implements MessageProcessingUseCase {
 
     @Override
     public void process(String message) {
-        log.info("==================================================");
-        log.info("MENSAGEM RECEBIDA DO GCP PUBSUB:");
-        log.info(">> {}", message);
-        log.info("==================================================");
+//        log.info("==================================================");
+//        log.info("MENSAGEM RECEBIDA DO GCP PUBSUB:");
+//        log.info(">> {}", message);
+//        log.info("==================================================");
 
         // 1. Valida a mensagem
         schemaValidationService.validateAndParse(message)
@@ -26,9 +26,9 @@ public class MessageProcessingServiceImpl implements MessageProcessingUseCase {
                 // 2. Se for válida, publica
                 validMessage -> {
                     try {
-                        log.info("Enviando mensagem validada para a Confluent Cloud Kafka...");
+                        //log.info("Enviando mensagem validada para a Confluent Cloud Kafka...");
                         messagePublisherPort.publish(validMessage);
-                        log.info("Mensagem enviada com sucesso para o Kafka.");
+                        //log.info("Mensagem enviada com sucesso para o Kafka.");
                     } catch (Exception e) {
                         log.error("Falha ao enviar mensagem para o Kafka após validação.", e);
                         // Lógica de "dead-letter queue" aqui

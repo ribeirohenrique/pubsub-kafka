@@ -31,7 +31,7 @@ public class SchemaValidationService {
     public Optional<CustomSchema> validateAndParse(String jsonMessage) {
         try {
             CustomSchema message = objectMapper.readValue(jsonMessage, CustomSchema.class);
-            log.info("Mensagem JSON validada com sucesso e convertida para o formato Avro POJO.");
+            //log.info("Mensagem JSON validada com sucesso e convertida para o formato Avro POJO.");
             return Optional.of(message);
         } catch (Exception e) {
             log.error("Falha na validação do schema. A mensagem JSON é incompatível. Mensagem: '{}'", jsonMessage, e);
