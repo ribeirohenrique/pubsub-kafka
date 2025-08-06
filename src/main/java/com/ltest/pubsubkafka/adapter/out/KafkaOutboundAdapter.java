@@ -1,5 +1,6 @@
 package com.ltest.pubsubkafka.adapter.out;
 
+
 import com.ltest.pubsubkafka.domain.port.out.MessagePublisherPort;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
