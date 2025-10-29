@@ -1,6 +1,6 @@
-package com.ltest.pubsubkafka.domain.service;
+package com.test.pubsubkafka.domain.domain.service;
 
-import com.ltest.pubsubkafka.domain.port.out.MessagePublisherPort;
+import com.test.pubsubkafka.domain.domain.port.out.MessagePublisherPort;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

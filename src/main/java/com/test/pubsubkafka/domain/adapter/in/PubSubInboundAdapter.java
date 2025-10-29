@@ -1,11 +1,11 @@
-package com.ltest.pubsubkafka.adapter.in;
+package com.test.pubsubkafka.domain.adapter.in;
 
 import com.google.cloud.spring.pubsub.core.PubSubTemplate;
 import com.google.cloud.spring.pubsub.integration.AckMode;
 import com.google.cloud.spring.pubsub.integration.inbound.PubSubInboundChannelAdapter;
 import com.google.cloud.spring.pubsub.support.BasicAcknowledgeablePubsubMessage;
 import com.google.cloud.spring.pubsub.support.GcpPubSubHeaders;
-import com.ltest.pubsubkafka.domain.service.MessageProcessingUseCase;
+import com.test.pubsubkafka.domain.domain.service.MessageProcessingUseCase;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;

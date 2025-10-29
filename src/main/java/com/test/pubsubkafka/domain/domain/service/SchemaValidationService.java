@@ -1,4 +1,4 @@
-package com.ltest.pubsubkafka.domain.service;
+package com.test.pubsubkafka.domain.domain.service;
 
 import br.com.cafe.especial.CustomSchema;
 import com.fasterxml.jackson.databind.ObjectMapper;

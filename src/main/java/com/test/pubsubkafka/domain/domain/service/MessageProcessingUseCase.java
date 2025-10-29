@@ -1,4 +1,4 @@
-package com.ltest.pubsubkafka.domain.service;
+package com.test.pubsubkafka.domain.domain.service;
 
 public interface MessageProcessingUseCase {
     /**

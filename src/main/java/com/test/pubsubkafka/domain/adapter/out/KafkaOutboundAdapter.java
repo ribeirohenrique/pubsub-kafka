@@ -1,8 +1,8 @@
-package com.ltest.pubsubkafka.adapter.out;
+package com.test.pubsubkafka.domain.adapter.out;
 
 
 import br.com.cafe.especial.CustomSchema;
-import com.ltest.pubsubkafka.domain.port.out.MessagePublisherPort;
+import com.test.pubsubkafka.domain.domain.port.out.MessagePublisherPort;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,4 +1,4 @@
-package com.ltest.pubsubkafka.domain.port.out;
+package com.test.pubsubkafka.domain.domain.port.out;
 
 
 import br.com.cafe.especial.CustomSchema;
